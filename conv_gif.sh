@@ -8,7 +8,9 @@
 # Usage:
 #
 #     $ chmod +x conv_gif.sh
-#     $ ./conv_gif.sh input.(mp4|mov|...) output.gif [FRAMERATE=15]
+#     $ ./conv_gif.sh input.(mp4|mov|...) output.gif begin time
+#
+# Memo: Tumblr's GIF size limit is 2MB.
 #
 INPUT=$1
 OUTPUT=$2
@@ -16,7 +18,7 @@ BEGIN=$3
 TIME=$4
 
 if [ $# -le 0 ]; then
-    echo "Usage: ./conv_gif.sh input.(mp4|mov|...) output.gif [FRAMERATE=15]"
+    echo "Usage: ./conv_gif.sh input.(mp4|mov|...) output.gif begin time"
     exit -1
 fi
 
